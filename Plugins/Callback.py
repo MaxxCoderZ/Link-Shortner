@@ -1,4 +1,8 @@
 #By @coderzHEX
+from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
+from pyrogram import Client
+from script import script  # pylint:disable=import-error
+
 elif query.data == "start_data":
 
         keyboard = InlineKeyboardMarkup(
