@@ -15,11 +15,11 @@
             "value": ""
         },
         "API_ID": {
-            "description": "Get this value from https://my.telegram.org",
+            "description": "Get this value from https://my.telegram.org or @UseTGXBot",
             "value": ""
         },
         "API_HASH": {
-            "description": "Get this value from https://my.telegram.org",
+            "description": "Get this value from https://my.telegram.org or @UseTGXBot",
             "value": ""
         },
         "API_KEY": {
