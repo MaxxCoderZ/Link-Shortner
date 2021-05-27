@@ -2,6 +2,7 @@
 {
     "name": "Coderz_Shortner",
     "description": "Make short link by using Coderz Shortner API key",
+    "logo": "https://telegra.ph/file/fac387fdeae7ea6d79770.jpg",
     "keywords": [
         "telegram",
         "Coderz Shortner"
