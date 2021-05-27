@@ -1,11 +1,42 @@
 
-{ "name": "Coderz Link Shortner",
- "description": "A Telegram Bot To Short Your Links Using GP Links API",
- "keywords": [ "Songs", "Jio-Saavan", "Bot" ], 
-"logo": "https://telegra.ph/file/fac387fdeae7ea6d79770.jpg", 
-"repository": "https://github.com/MaxxCoderZ/Link-Shortner", 
-"success_url": "/", 
-"env": { "BOT_TOKEN": { "description": "your Telegram Bot Token, from @BotFather" },
-"BOT_USERNAME": { "description": "USER NAME OF YOUR BOT" },
-"GP_API_KEY": { "description": "GET YOUR API KEY FROM https://gplinks.in/member/tools/api" } },
- "formation": { "web": { "quantity": 1, "size": "free" } }, "image": "heroku/php"}
+
+{
+    "name": "GPlink_Bot",
+    "description": "Make short link by using GPlink API key",
+    "keywords": [
+        "telegram",
+        "gplink"
+    ],
+    "website": "https://github.com/MaxxCoderZ/Link-Shortner",
+    "repository": "https://github.com/MaxxCoderZ/Link-Shortner",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Your bot token",
+            "value": ""
+        },
+        "API_ID": {
+            "description": "Get this value from https://my.telegram.org",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "Get this value from https://my.telegram.org",
+            "value": ""
+        },
+        "API_KEY": {
+            "description": "Get API key from https://gplinks.in/member/tools/api",
+            "required": false
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
