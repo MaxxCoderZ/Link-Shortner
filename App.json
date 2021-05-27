@@ -1,13 +1,13 @@
 
 {
-    "name": "GPlink_Bot",
-    "description": "Make short link by using GPlink API key",
+    "name": "Coderz_Shortner",
+    "description": "Make short link by using Coderz Shortner API key",
     "keywords": [
         "telegram",
-        "gplink"
+        "Coderz Shortner"
     ],
-    "website": "https://github.com/Mahesh0253/GPlink-bot",
-    "repository": "https://github.com/Mahesh0253/GPlink-bot",
+    "website": "https://github.com/MaxxcoderZ/Link-shortner",
+    "repository": "https://github.com/MaxxcoderZ/Link-shortner",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token",
