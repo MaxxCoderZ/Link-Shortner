@@ -1,2 +1,11 @@
 
-{ "name": "Coderz Link Shortner", "description": "A Telegram Bot To Short Your Links Using GP Links API", "keywords": [ "Songs", "Jio-Saavan", "Bot" ], "logo": "https://telegra.ph/file/fac387fdeae7ea6d79770.jpg", "repository": "https://github.com/MaxxCoderZ/Link-Shortner", "success_url": "/", "env": { "BOT_TOKEN": { "description": "your Telegram Bot Token, from @BotFather" },"BOT_USERNAME": { "description": "USER NAME OF YOUR BOT" },"GP_API_KEY": { "description": "GET YOUR API KEY FROM https://gplinks.in/member/tools/api" } }, "formation": { "web": { "quantity": 1, "size": "free" } }, "image": "heroku/php"}
+{ "name": "Coderz Link Shortner",
+ "description": "A Telegram Bot To Short Your Links Using GP Links API",
+ "keywords": [ "Songs", "Jio-Saavan", "Bot" ], 
+"logo": "https://telegra.ph/file/fac387fdeae7ea6d79770.jpg", 
+"repository": "https://github.com/MaxxCoderZ/Link-Shortner", 
+"success_url": "/", 
+"env": { "BOT_TOKEN": { "description": "your Telegram Bot Token, from @BotFather" },
+"BOT_USERNAME": { "description": "USER NAME OF YOUR BOT" },
+"GP_API_KEY": { "description": "GET YOUR API KEY FROM https://gplinks.in/member/tools/api" } },
+ "formation": { "web": { "quantity": 1, "size": "free" } }, "image": "heroku/php"}
