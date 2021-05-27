@@ -30,7 +30,7 @@
     "addons": [],
     "buildpacks": [
         {
-            "url": "heroku/python"
+            "url": "heroku/python.tgz"
         }
     ],
     "formation": {
