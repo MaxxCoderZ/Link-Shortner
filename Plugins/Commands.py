@@ -1,10 +1,45 @@
 # By @coderzHEX
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
-from pyrogram import Client, filters
+from pyrogram import Client as tg, filters
 from script import script  # pylint:disable=import-error
 
+tg = Client('ShortlinkBot',
+             api_id=API_ID,
+             api_hash=API_HASH,
+             bot_token=BOT_TOKEN
+)
 
-@Client.on_message(filters.command(["start"]) & filters.private)
+@tg.on_message(filters.url & filters.private)
+async def url(bot, update):
+    link = update.matches[0].group(0)
+    shortened_url, Err = get_shortlink(link)
+    if shortened_url is None:
+        message = f"Something went wrong \n{Err}"
+        await update.reply(message, quote=True)
+        return
+    message = f"Here is your shortlink\n {shortened_url}"
+    markup = InlineKeyboardMarkup([[InlineKeyboardButton("Link 🔗", url=shortened_url)]])
+    # i don't think this bot with get sending message error so no need of exceptions
+    await update.reply_text(text=message, reply_markup=markup, quote=True)
+
+def get_shortlink(url):
+    shortened_url = None
+    Err = None
+    try:
+       if BITLY_KEY:
+           ''' Bittly Shorten'''
+           s = Shortener(api_key=BITLY_KEY)
+           shortened_url = s.bitly.short(url)
+       else:
+           ''' Da.gd : I prefer this '''
+           s = Shortener()
+           shortened_url = s.dagd.short(url)
+    except Exception as error:
+        Err = f"#ERROR: {error}"
+        log.info(Err)
+    return shortened_url,Err
+
+@tg.on_message(filters.command(["start"]) & filters.private)
 async def start(client: Client, message: Message):
     try:
         await message.reply_text(
@@ -30,7 +65,7 @@ async def start(client: Client, message: Message):
         pass
 
 
-@Client.on_message(filters.command(["help"]) & filters.private)
+@tg.on_message(filters.command(["help"]) & filters.private)
 async def help(client, message):
     try:
         await message.reply_text(
@@ -56,7 +91,7 @@ async def help(client, message):
         pass
 
 
-@Client.on_message(filters.command(["about"]) & filters.private)
+@tg.on_message(filters.command(["about"]) & filters.private)
 async def about(client, message):
     try:
         await message.reply_text(
@@ -80,3 +115,6 @@ async def about(client, message):
         )
     except Exception:
         pass
+
+log.info("Bot-Started Working!!!")
+tg.run()
