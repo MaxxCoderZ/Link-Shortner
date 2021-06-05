@@ -5,15 +5,14 @@ from pyrogram import Client, filters
 API_ID = environ.get('API_ID')
 API_HASH = environ.get('API_HASH')
 BOT_TOKEN = environ.get('BOT_TOKEN')
-API_KEY = environ.get('API_KEY', '5fd20df0c4db85798dd4f5ff3d03e3606a94f98b')
+BITLY_KEY = environ.get('BITLY_KEY')
 
 bot = Client('Linkshortner',
              api_id=API_ID,
              api_hash=API_HASH,
              bot_token=BOT_TOKEN,
-             workers=50,
-             sleep_threshold=10)
-
+             BITLY_KEY=BITLY_KEY
+)
 @bot.on_message(filters.regex(r'https?://[^\s]+') & filters.private)
 async def link_handler(bot, message):
     link = message.matches[0].group(0)
