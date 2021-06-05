@@ -1,6 +1,6 @@
 {
     "name": "LinkShortner",
-    "description": "Make short link by using GPlink API key",
+    "description": "Make short link by using Bit.ly API key",
     "keywords": [
         "telegram",
         "gplink"
