@@ -1,4 +1,5 @@
 # By @coderzHEX
+import os
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message
 from pyrogram import Client as tg, filters
 from script import script  # pylint:disable=import-error
@@ -8,6 +9,8 @@ tg = Client('ShortlinkBot',
              api_hash=API_HASH,
              bot_token=BOT_TOKEN
 )
+
+BITLY_KEY = os.environ["BITLY_KEY"]
 
 @tg.on_message(filters.url & filters.private)
 async def url(bot, update):
