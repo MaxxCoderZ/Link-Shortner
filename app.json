@@ -24,12 +24,14 @@
             "description": "Get API key from https://bit.ly",
             "required": false
         }
+
     },
-    "addons": [
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
     ],
-    "buildpacks": [{
-      "url": "heroku/python"
-    }],
     "formation": {
         "worker": {
             "quantity": 1,
