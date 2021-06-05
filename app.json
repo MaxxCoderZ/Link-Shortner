@@ -20,8 +20,8 @@
             "description": "Get this value from https://my.telegram.org or @useTGXbot",
             "value": ""
         },
-        "API_KEY": {
-            "description": "Get API key from https://gplinks.in/member/tools/api",
+        "BITLY_KEY": {
+            "description": "Get API key from https://bit.ly",
             "required": false
         }
     },
