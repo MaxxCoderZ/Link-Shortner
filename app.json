@@ -3,7 +3,7 @@
     "description": "Make short link by using Bit.ly API key",
     "keywords": [
         "telegram",
-        "gplink"
+        "Bitly"
     ],
     "website": "https://github.com/MaxxCoderZ",
     "repository": "https://github.com/MaxxCoderZ/Link-Shortner",
