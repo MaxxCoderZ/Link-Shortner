@@ -39,7 +39,7 @@
 ### Deploy in your vps
 ```sh
 git clone https://github.com/MaxxCoderz/Link-Shortner
-cd Image-Editor
+cd Link-shortner
 pip3 install -r requirements.txt
 # <Create config.py appropriately>
 python3 bot.py
@@ -50,10 +50,10 @@ python3 bot.py
 * TG_BOT_TOKEN  - Get bot token from @BotFather
 * APP_ID        - From my.telegram.org (or @UseTGXBot)
 * API_HASH      - From my.telegram.org (or @UseTGXBot)
-* API_KEY  - From [GPLinks](https://gplinks.in/member/tools/api)
+* API_KEY  - From Bitl.ly
 
 ## Credits
 
-[![CoderZ](https://img.shields.io/badge/Stack_Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white)](https://stackoverflow.com/)
+[![coderz](https://img.shields.io/badge/Stack_Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white)](https://stackoverflow.com/)
 
-[![CoderZ](https://img.shields.io/badge/Pyrogram%20-%23F37626.svg?&style=for-the-badge&logo=telegram&logoColor=white)](https://github.com/pyrogram/pyrogram)
+[![coderz](https://img.shields.io/badge/Pyrogram%20-%23F37626.svg?&style=for-the-badge&logo=telegram&logoColor=white)](https://github.com/pyrogram/pyrogram)
